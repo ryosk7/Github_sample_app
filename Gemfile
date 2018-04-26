@@ -20,9 +20,15 @@ gem 'slim-rails'
 gem 'html2slim'
 gem 'dotenv-rails'
 gem 'graphql'
+gem 'graphiql-rails'
+gem "octokit", "~> 4.0"
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
 end
 
 group :development do
@@ -33,3 +39,5 @@ group :development do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'graphiql-rails', group: :development
