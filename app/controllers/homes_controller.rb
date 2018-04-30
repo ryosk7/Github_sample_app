@@ -4,6 +4,11 @@ class HomesController < ApplicationController
   end
   def index
     @users = User.all
-    @client = Octokit::Client.new(:access_token => current_user.oauth_token)
+    # @users.each do |user|
+    #   @client = user.repos_info
+    # end
+    @users.each do |user_info|
+      @client = Octokit::Client.new(:access_token => user_info.oauth_token)
+    end
   end
 end
